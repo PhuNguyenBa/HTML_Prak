@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Что хотите?</title>
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.css">
+</head>
+<body>
+  
+  <div id="item-modal" class="modal">
+    <span class="item-modal-close">&times;</span>
+    <img class="item-modal-content" id="item-modal-content">
+    <div class="item-modal-caption" id="item-modal-caption"></div>
+  </div>
+  <div class="app">
+    <header class="header">
+      <div class="grid">
+        <nav class="header__navbar">
+          <ul class="header__navbar-list">
+            <li class="header__nav-item header__nav-item--has-qr a">
+              QR code
+              <div class="header_qr">
+                <img src="./assets/img/1688711217287.857.png" alt="" class="header_qr-img">
+              </div>
+            </li>
+            <li class="header__nav-item separate">
+              <a href="https://www.google.com/maps" class="header__navbar-icon-link">
+                <i class="fa-sharp fa-solid fa-map-location-dot"></i>
+                укажите адрес доставки
+              </a>
+            </li>
+          </ul>
+          <ul class="header__navbar-list">
+            <li class="header__nav-item header__nav-item--has-notify">
+              <a href="" class="header__navbar-item-link"><i class="fa-sharp fa-regular fa-bell"></i> 
+                сообщение
+              </a>
+              <div class="header_notification">
+                <header class="header_notification-header">
+                  <h3>новый сообщение</h3>
+                </header>
+                <ul class="header_notification-list">
+                  <li class="header_notification-item">
+                    <a href="" class="header_notification-link">
+                      <img src="./assets/img/Hinh-anh-sale.jpg" alt="" class="header_notification-img">
+                        <div class="header_notification-info">
+                          <span class="header_notification-name">получить скидку</span>
+                        </div>
+                    </a>
+                  </li>
+                  
+                  <li class="header_notification-item">
+                    <a href="" class="header_notification-link">
+                      <img src="./assets/img/cac-mau-that-lung-nam-dep-1-1.jpg" alt="" class="header_notification-img">
+                        <div class="header_notification-info">
+                          <span class="header_notification-name">успешно купить</span>
+                        </div>
+                    </a>
+                  </li>
+
+                  <li class="header_notification-item">
+                    <a href="" class="header_notification-link">
+                      <img src="https://i0.wp.com/thatnhucuocsong.com.vn/wp-content/uploads/2022/01/anh-tui-xach-nu-dep-gia-re.jpg?fit=802%2C802&ssl=1" alt="" class="header_notification-img">
+                        <div class="header_notification-info">
+                          <span class="header_notification-name">успешно купить</span>
+                        </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="header__nav-item">
+              <a href="" class="header__navbar-item-link">помощь</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="" class="header__navbar-item-link header__navbar-item-link_strong a">регистрировать</a>
+
+            </li>
+            <li class="header__nav-item">
+              <a href="" class="header__navbar-item-link header__navbar-item-link_strong separate">войти</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-with-search">
+          <div class="header__logo">
+            <img src="./assets/img/[removal.ai]_823ae29c-0007-4f8c-bfeb-3a35554f6755.png" alt="" class="logo-img">
+          </div>
+
+          <div class="header__search">
+            <a href="" class="icon-tim-kiem">
+              <i class="fa-solid fa-magnifying-glass icon-tim-kiem-icon"></i>
+            </a>
+            <input type="text" class="search" placeholder="я ищу">
+            
+          </div>
+          <!--gio hang-->
+          <div class="header__cart">
+            <div class="header__cart-wrap">
+              <a href="" class="icon-cart">
+                <i class="fa-solid fa-cart-shopping icon-cart-icon-cart" ></i>
+                <div class="header__cart-list  header__cart-list--no-cart">
+                  <img src="./assets/img/cart-empty-img.8b677cb3.png" alt="" class="header__cart-no-cart-img">
+
+                </div>
+
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="app__container">
+      <div class="grid">
+        <div class="grid__row">
+          <div class="grid__colum-2">
+            <nav class="category">
+              <h3 class="category__heading">
+                <i class="category__heading-icon fa-solid fa-list"></i>
+                Категория
+              </h3>
+              <ul class="category-list">
+                <li class="category-item">
+                  <a href="" class="category-item__link">Всем</a>
+                </li>
+                <li class="category-item">
+                  <a href="" class="category-item__link">Мужчинам</a>
+                </li>
+                <li class="category-item">
+                  <a href="" class="category-item__link">Женщинам</a>
+                </li>
+                <li class="category-item">
+                  <a href="" class="category-item__link">Детям</a>
+                </li>
+                <li class="category-item">
+                  <a href="" class="category-item__link">Тренд</a>
+                </li>
+                <li class="category-item">
+                  <a href="" class="category-item__link">Обувь</a>
+                </li>
+                <li class="category-item">
+                  <a href="" class="category-item__link">Бестселлер</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="grid__colum-10">
+            <div class="home-toolbar">
+              <div class="home-filter">
+                <span class="home-filter__label">Фильтр</span>
+                <button class="btn" id="favourite">Любимые</button>
+                <button class="btn" id="five-stars">5 Звёзд</button>
+              </div>
+              <div class="home-sort">
+                <span class="home-sort__label">Сортировка</span>
+                <div class="select-input">
+                  <span class="select-input__label">Оценка</span>
+                  <i class="fa-solid fa-angle-down icon-mui-ten"></i>
+                  <ul class="select-input__list">
+                    <li class="select-input__item">
+                      <a href="" class="select-input__link select-input__link-2" id="star-sort-desc">Уменьшать</a>
+                      <a href="" class="select-input__link select-input__link-1" id="star-sort-asc">Увеличивать</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="select-input">
+                  <span class="select-input__label">Цена</span>
+                  <i class="fa-solid fa-angle-down icon-mui-ten"></i>
+                  <ul class="select-input__list">
+                    <li class="select-input__item">
+                      <a href="" class="select-input__link select-input__link-2" id="price-sort-desc">Уменьшать</a>
+                      <a href="" class="select-input__link select-input__link-1" id="price-sort-asc">Увеличивать</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="home-product">
+              <div class="grid__row-wrap">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="grid">
+        <div class="grid__row">
+          <div class="grid__colum-2-4">
+            <h3 class="footer__heading">Покупателям</h3>
+            <ul class="footer__list">
+              <li class="footer-item">
+                <a href="" class="footer-item__link">Как сделать заказ</a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="footer-item__link">Доставка</a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="footer-item__link">Вопросы и ответы</a>
+              </li>
+            </ul>
+          </div>
+          <div class="grid__colum-2-4">
+            <h3 class="footer__heading">Партнерам</h3>
+            <ul class="footer__list">
+              <li class="footer-item">
+                <a href="" class="footer-item__link">Курьерам </a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="footer-item__link">Партнерский пункт выдачи</a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="footer-item__link">Франшизный пункт выдачи</a>
+              </li>
+            </ul>
+          </div>
+          <div class="grid__colum-2-4">
+            <h3 class="footer__heading">Компания</h3>
+            <ul class="footer__list">
+              <li class="footer-item">
+                <a href="" class="footer-item__link">Реквизиты</a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="footer-item__link">Пресс-центр</a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="footer-item__link">Контакты</a>
+              </li>
+            </ul>
+            
+          </div>
+          <div class="grid__colum-2-4">
+            <h3 class="footer__heading">Мы в соцсетях</h3>
+            <ul class="footer__list">
+              <li class="footer-item">
+                <a href="" class="footer-item__link">ВКонтакте</a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="footer-item__link">YouTube</a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="footer-item__link">Телеграм</a>
+              </li>
+            </ul>
+          </div>
+          <div class="grid__colum-2-4" class="footer-qr">
+            <h3 class="footer__heading">Приложение</h3>
+            <img src="./assets/img/1688711217287.857.png" alt="" class="qr__code">
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/buttons.js"></script>
+  <script src="assets/js/items.js"></script>
+  <script src="assets/js/index.js"></script>
+</body>
+</html>

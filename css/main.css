@@ -1,0 +1,719 @@
+.header{
+    height: 120px;
+    background-image:linear-gradient(0,#fe6433, #f53e2d);/*dai mau chuyen header*/
+
+}
+
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+
+}
+.header__navbar-list{
+    list-style: none;/*bo dau . trc the li*/
+    padding-left: 0;
+}
+
+.header__nav-item{
+    margin:0 9px;
+}
+.header__nav-item, .header__navbar-item-link{
+    display: inline-block;
+    color:var(--white-color);
+    font-size: 1.5rem;
+    text-decoration: none;/*bo gach chan*/
+    font-weight: 1;/*do day chu*/
+}
+
+.header__navbar-item-link_strong{
+    font-weight: 200;/*do day chu*/
+}
+
+.separate{
+    border-left: 1px solid #fff;
+    padding-left: 7px;
+    
+}
+.a{
+    margin-right: -5px;
+}
+
+.header__nav-item:hover, .header__navbar-item-link:hover{
+color:rgba(255,255,255,0.7);
+cursor: pointer;/*doi thanh hinh ban tay khi tro chuot vao*/
+}
+
+.header__navbar-icon-link{
+    color: var(--white-color);
+    text-decoration: none;
+
+}
+.header__navbar-icon-link:hover{
+    color:rgba(255,255,255,0.7);
+cursor: pointer;/*doi thanh hinh ban tay khi tro chuot vao*/
+}
+
+
+/*header qr code*/
+.header_qr{
+    background-color: var(--white-color);
+    width: 130px;
+    left: 54px;;
+    top:35px;
+    position:absolute;
+    display: none;/*an qr khoi man hinh*/
+    
+}
+.header_qr-img{
+    width: 130px;
+    height: 130px;
+}
+.header__nav-item--has-qr:hover .header_qr{
+    display: block;
+}
+
+.header__nav-item--has-notify:hover .header_notification{
+    display: block;
+}
+/*header_notification*/
+.header_notification{
+    position: absolute;
+    top:33px;
+    width: 404px;
+    right: 323px;
+    background-color: var(--white-color);
+    cursor: text;/*chuyn doi con tro chuot*/
+    transform-origin: top;
+    animation: header_notificationgrowth ease-in 0.1s;
+    display: none;
+}
+/*tao mui ten tren o thong baos bang border*/
+.header_notification::before{
+    content:"";
+    border: 20px solid;
+    position: absolute;
+    border-color: transparent transparent var(--white-color) transparent;/*tao mui ten cho thong bao*/
+    right: 12px;
+    top:-30px;
+    
+}
+
+
+/*hieu ung thong bao*/
+@keyframes header_notificationgrowth{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+
+}
+
+.header_notification-header:hover .header_notification{
+    display: block;
+}
+
+.header_notification-header{
+    height: 40px;
+    background-color: var(--white-color);
+    
+
+}
+.header_notification-header h3{
+    color: #999;
+    margin: 0;
+    margin-left: 12px;
+    font-size: 1.4rem;
+    line-height: 40px;
+
+}
+
+.header_notification-list{
+    padding-left: 0;
+    list-style: none;/*bo dau . trc the li*/
+    
+
+}
+
+.header_notification-item{
+    background-color: antiquewhite;
+    
+
+}
+
+.header_notification-item:hover{
+    background-color: #fff;
+}
+.header_notification-link{
+    display: flex;
+    text-decoration: none;/*bo gach chan*/
+    font-size: 16px;
+    color: black;
+
+}
+
+.header_notification-img{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+.header_notification-name{
+    line-height:29px;
+}
+
+.btn{
+    height: 25px;
+    min-width: 100px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.auth-form__socials{
+    background-color: #c4bbbb;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    margin-top: 92px;
+}
+
+.btn--primary{
+    background-color: #271ae4;
+    color: rgb(255, 255, 255);
+}
+
+.btn--with-icon-facebook{
+    
+    background-color: #4586b8;
+    min-width: 169px;
+    padding: 3px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;/*bo gach chan*/
+}
+.btn--with-icon-google{
+    background-color: #eaeef1;
+    color: #3d3c3c;
+    padding: 3px; 
+    min-width: 167px;
+    text-align: center;
+    text-decoration: none;/*bo gach chan*/
+}
+
+/*header-with-search*/
+.header-with-search{
+    display: flex;
+    align-items: center;
+    height: 83px;
+    padding: 16px;
+}
+
+.logo-img{
+    width: 60px;
+    height: 60px;
+}
+.header__search{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    background-color: #ffffff;
+    margin: 0 80px;
+    border-radius: 8px;
+}
+.search{
+    height: 30px;
+    flex: 1;
+    margin-left: 5px;
+    background-color: #ffffff;
+    font-size: 20px;
+    border: none;
+    outline: 0;/*bo boeder cua input*/
+    border-radius: 8px;
+}
+.icon-cart-icon-cart{
+    font-size: 30px;
+    margin-left: 15px;
+    color: #fcfcf9;
+
+}
+.icon-tim-kiem-icon{
+    border: none;
+    padding-left: 7px; 
+}
+.icon-tim-kiem{
+    background-color: #fff;
+    padding-top: 2px;
+    font-size: 16px;
+}
+
+.header__cart{
+    position: relative;
+   
+    
+}
+
+.header__cart-list{
+    position: absolute;
+    background-color: #ececc6;
+    top:42px;
+    right: -10px;
+    border-radius: 2px;
+    display: none;
+    z-index: 1;
+}
+.header__cart-no-cart-img{
+    width:300px;
+    height: 100%;
+}
+.header__cart-wrap{
+    position: relative;
+}
+.header__cart-list--no-cart::after{
+    content: "";
+    border: 20px solid;
+    position: absolute;
+    border-color: transparent transparent #ececc6 transparent;
+    right: 5px;
+    top:-35px;
+}
+
+.icon-cart:hover .header__cart-list{
+display: block;
+}
+
+.header__cart-no-cart-img{
+    cursor: default;
+}
+
+/*app container*/
+.app__container{
+    background-color: #d3d2d2;
+    padding: 16px;
+}
+
+.category{
+    background-color: #fff;
+    min-width: 240px;
+    border-radius: 16px;
+    margin-top: 0;
+}
+
+.category__heading{
+    font-size: 1.7rem;
+    color:#3d3c3c;
+    padding: 16px;
+    margin: 0;
+    border-bottom:1px solid rgba(0,0,0,0.05) ;
+}
+
+.category__heading-iocn{
+    font-size: 1.4rem;
+    margin-right: 4px;
+    position: relative;
+    top:-1px;
+
+}
+
+.category-list{
+    list-style: none;/*bo dau cham trc the li*/
+    padding: 8px 16px;
+}
+
+.category-item {
+    padding: 8px;
+}
+
+.category-item__link{
+    position: relative;
+    right: 0;
+    font-size: 1.6rem;
+    color:#3d3c3c;
+    text-decoration: none;/*bo gach chan cua chu*/
+    display: block;
+    transition: right linear 0.1s;
+}
+
+.category-item__link:hover{
+    right: -4px;
+    color:#e6aaaa
+}
+
+/*home sort + filter*/
+
+.home-toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 16px;
+}
+.home-filter, .home-sort{
+    display: flex;
+    align-items: center;
+
+}
+.home-filter > *, .home-sort > *{
+    margin: 0 8px;
+}
+.home-filter__label, .home-sort__label{
+    font-weight: bold;
+    font-size: 16px;
+    outline: none;
+    border: 0;
+}
+
+.select-input__label{
+    font-size: 16px;
+   
+}
+
+.btn{
+    background-color: #ffffff;
+    padding: 16px;
+    min-width: 100px;
+    outline: none;
+    border: 0;
+    cursor:pointer;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn--selected{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.select-input{
+    background-color: #fff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    position:relative;
+    height: 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.select-input__item{
+    display: flex;
+    flex-direction: column;
+}
+.select-input__item > a{
+    text-align: center;
+    padding: 8px;
+}
+.select-input__item > a:first-child{
+    border-radius: 0 8px 0 0;
+}
+.select-input__item > a:last-child{
+    border-radius: 0 0px 8px 8px;
+}
+.icon-mui-ten{
+    justify-self: flex-end;
+    margin-left: 8px;
+}
+.select-input__list{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    padding-top: 26px;
+    margin-left: -40px;
+    display: none;
+    z-index: 1;
+    
+}
+.select-input:hover .select-input__list{
+    display: block;
+}
+.select-input__link{
+    min-width: 120px;
+    color: #3d3c3c;
+    font-size: 16px;
+    text-decoration: none;
+    margin-right: 15px;
+    background-color: #ffffff;
+    padding-bottom: 5px;
+}
+.select-input__link:hover{
+    color: #f5f5f5;
+    background-color: #243fb4;
+}
+
+.select-input__list::before{
+    content:"";
+    border: 12px solid;
+    position: absolute;
+    border-color: transparent transparent rgb(255, 255, 255) transparent;/*tao mui ten cho thong bao*/
+    left:39px;
+    top:4px;
+    
+}
+
+/*home product-iteam*/
+.home-product-item{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 24px;
+    position: relative;
+    background-color: #fff;
+    box-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.1) ;
+    border-radius: 8px;
+    cursor: pointer;
+    top: 0;
+    transition: top 0.2s ease-in, box-shadow 0.2s ease-in;
+}
+.home-product-item:hover{
+    top: -8px;
+    transition: top 0.2s ease-in, box-shadow 0.2s ease-in;
+    box-shadow:0 1px 20px 0 rgba(0, 0, 0, 0.4) ;
+}
+.home-product-item__img{
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px 8px 0 0;
+}
+.home-product-item__name{
+    font-size:1.8rem ;
+    font-weight: 500;
+    color:#3d3c3c;
+    line-height:1.8rem;
+    padding: 8px 16px 0;
+    margin: 10px 0;
+    height: 3.6 rem;
+    overflow: hidden;
+}
+
+.home-product-item__price{
+    display: flex;
+    padding: 8px 16px 0;
+    align-items: baseline;/*chu viet tren 1 dong*/
+}
+.home-product-item__price-old{
+    font-size: 1.4rem;
+    color:#666;
+    text-decoration: line-through;/*gach o giua chu*/
+}
+
+.home-product-item__price-current{
+    font-size: 1.6rem;
+    color: #e25454;
+    margin-left: 6px;
+    
+}
+.home-product-item__action{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px 0;
+    font-size: 1.4rem;
+}
+
+.home-product-item__like-liked {
+    color: #c0392b;
+}
+
+.home-product-item__rating-filled {
+    color: #f1c40f;
+    --fa-border-color: black;
+}
+
+.home-product-item__origin{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+    font-size: 1.5rem;
+    color: #595959;
+    font-weight: 300;
+}
+
+.home-product-item__favourite{
+    position: absolute;
+    top:10px;
+    left:-13px;
+    font-size: 1.2rem;
+    color: #e7dada;
+    background-color: #eb4d1d;
+    margin-left: 5px;
+    margin-right: 3px;
+    padding-right: 5px;
+    padding-left: 6px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.home-product-item__favourite::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    border-top: 7px solid #eb4d1d;
+    border-left: 7px solid transparent;
+}
+
+.home-product-item__sale-off{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 43px;
+    height: 40px;
+    text-align: center;
+    background-color: #e6d432;
+    border-radius: 0px 8px 0px 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4px;
+    animation: beat 1s ease-in infinite normal;
+}
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.home-product-item__sale-off::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-width: 0 22px 12px;
+    border-style: solid;
+    border-color: transparent #e6d432 transparent #e6d432;
+    margin-bottom: -12px;
+}
+.home-product-item__sale-off-percent{
+    color:#eb4d1d;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.home-product-item__sale-off-label{
+    font-size: 1.3rem;
+}
+/*footer*/
+.footer{
+    border-top: 4px solid #243fb4;
+    padding: 16px 48px;
+}
+
+.footer__heading{
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+.footer__list{
+    padding-left: 0;
+    list-style: none;/*bo cham trc the li */
+    font-size: 1.5rem;
+}
+.footer-item{
+    margin-bottom: 10px;
+}
+.footer-item__link{
+    text-decoration: none;/*bo gach chan*/
+    color:#3d3c3c;
+    font-weight: 300;
+}
+.qr__code{
+    width: 150px;
+    height:150px
+}
+.footer-item__link:hover{
+    color:#e25454
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+  
+.item-modal-content {
+    margin: auto;
+    display: block;
+    height: 500px;
+}
+
+.item-modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 24px;
+    height: 150px;
+    font-size: 24px;
+}
+  
+.item-modal-content, .item-modal-caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.item-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.item-modal-close:hover, .item-modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .item-modal-content {
+        width: 100%;
+    }
+}
+
+.footer-qr {
+    display: flex; 
+    align-items: center; 
+    flex-direction: column;
+}
